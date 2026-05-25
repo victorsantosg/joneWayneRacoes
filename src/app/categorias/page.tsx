@@ -1,4 +1,4 @@
-import Header from '../../components/Header';
+
 import Link from 'next/link';
 
 export default function CategoriasPage() {
@@ -12,7 +12,7 @@ export default function CategoriasPage() {
 
   return (
     <>
-      <Header />
+
       <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 min-h-[70vh]">
         <h1 className="font-display-lg text-display-lg text-primary mb-8">Nossas Categorias</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

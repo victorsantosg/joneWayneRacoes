@@ -1,6 +1,6 @@
 'use client';
 import { useCartStore } from '../../store/useCartStore';
-import Header from '../../components/Header';
+
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -62,7 +62,7 @@ export default function Page() {
 
   return (
     <>
-      <Header />
+
 <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
 {/*  Left Column: Checkout Sections  */}

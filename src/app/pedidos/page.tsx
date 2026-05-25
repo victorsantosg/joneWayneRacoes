@@ -1,5 +1,5 @@
 'use client';
-import Header from '../../components/Header';
+
 import Link from 'next/link';
 import { useCartStore } from '../../store/useCartStore';
 import { useRouter } from 'next/navigation';
@@ -73,7 +73,7 @@ export default function PedidosPage() {
 
   return (
     <>
-      <Header />
+
       <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 min-h-[70vh]">
         <div className="flex justify-between items-end mb-8">
           <h1 className="font-display-lg text-display-lg text-primary">Meus Pedidos</h1>
