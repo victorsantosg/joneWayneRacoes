@@ -33,8 +33,8 @@ export default function Header() {
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex gap-6 items-center">
             <Link className="text-secondary-container font-bold border-b-2 border-secondary-container font-label-sm text-label-sm py-1" href="/">Início</Link>
-            <Link className="text-on-primary/80 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm px-2 py-1 rounded" href="/">Categorias</Link>
-            <Link className="text-on-primary/80 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm px-2 py-1 rounded" href="/">Pedidos</Link>
+            <Link className="text-on-primary/80 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm px-2 py-1 rounded" href="/categorias">Categorias</Link>
+            <Link className="text-on-primary/80 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm px-2 py-1 rounded" href="/pedidos">Pedidos</Link>
           </nav>
           <Link href="/carrinho">
             <button className="flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-label-sm text-label-sm hover:bg-secondary transition-all active:scale-95 relative">
