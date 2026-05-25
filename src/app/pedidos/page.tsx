@@ -74,11 +74,11 @@ export default function PedidosPage() {
   return (
     <>
 
-      <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 min-h-[70vh]">
-        <div className="flex justify-between items-end mb-8">
-          <h1 className="font-display-lg text-display-lg text-primary">Meus Pedidos</h1>
-          <Link href="/#produtos" className="text-secondary font-bold hover:underline font-label-sm text-label-sm uppercase tracking-widest">
-            Fazer Novo Pedido
+      <main className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12 min-h-[70vh]">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-4">
+          <h1 className="text-3xl md:text-4xl font-black text-on-surface">Meus Pedidos</h1>
+          <Link href="/#produtos" className="text-primary font-bold hover:underline text-sm uppercase tracking-wide flex items-center gap-2">
+            Fazer Novo Pedido <span className="material-symbols-outlined text-[16px]">shopping_cart</span>
           </Link>
         </div>
         
@@ -87,20 +87,20 @@ export default function PedidosPage() {
             const isExpanded = expandedId === pedido.id;
             
             return (
-              <div key={pedido.id} className="bg-white border border-outline-variant p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-outline-variant/50">
+              <div key={pedido.id} className="bg-surface-container-lowest border border-outline-variant/40 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-outline-variant/30">
                   <div>
-                    <div className="flex items-center gap-3 mb-1">
-                      <span className="font-headline-lg text-headline-lg text-primary">{pedido.id}</span>
+                    <div className="flex flex-wrap items-center gap-3 mb-1">
+                      <span className="text-xl font-black text-on-surface">{pedido.id}</span>
                       <span className={`px-3 py-1 rounded-full text-xs font-bold ${pedido.statusColor}`}>
                         {pedido.status}
                       </span>
                     </div>
-                    <span className="text-on-surface-variant text-sm">Realizado em {pedido.data}</span>
+                    <span className="text-on-surface-variant text-sm font-medium">Realizado em {pedido.data}</span>
                   </div>
                   <div className="text-left md:text-right">
-                    <span className="block text-on-surface-variant text-sm mb-1 uppercase tracking-widest">Total</span>
-                    <span className="font-display-lg text-primary leading-none text-2xl">{pedido.total}</span>
+                    <span className="block text-on-surface-variant text-xs mb-1 uppercase tracking-wider font-bold">Total do Pedido</span>
+                    <span className="text-2xl font-black text-primary leading-none">{pedido.total}</span>
                   </div>
                 </div>
                 
@@ -136,19 +136,19 @@ export default function PedidosPage() {
                   </div>
                 )}
                 
-                <div className="mt-6 flex gap-4">
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <button 
                     onClick={() => toggleDetails(pedido.id)}
-                    className="px-6 py-2 border-2 border-primary text-primary rounded font-bold hover:bg-primary-container transition-all active:scale-95 flex items-center gap-2"
+                    className="flex-1 sm:flex-none px-6 py-3 border border-outline-variant text-on-surface rounded-xl font-bold hover:bg-surface-container transition-all active:scale-95 flex items-center justify-center gap-2"
                   >
-                    {isExpanded ? 'Esconder Detalhes' : 'Ver Detalhes'}
-                    <span className="material-symbols-outlined text-sm">{isExpanded ? 'expand_less' : 'expand_more'}</span>
+                    {isExpanded ? 'Recolher Detalhes' : 'Ver Detalhes'}
+                    <span className="material-symbols-outlined text-[20px]">{isExpanded ? 'expand_less' : 'expand_more'}</span>
                   </button>
                   <button 
                     onClick={() => handleComprarNovamente(pedido.itens)}
-                    className="px-6 py-2 bg-primary text-on-primary rounded font-bold hover:bg-tertiary transition-all active:scale-95"
+                    className="flex-1 sm:flex-none px-6 py-3 bg-primary/10 border border-primary/20 text-primary rounded-xl font-bold hover:bg-primary hover:text-white transition-all active:scale-95 flex items-center justify-center gap-2"
                   >
-                    Comprar Novamente
+                    <span className="material-symbols-outlined text-[20px]">shopping_cart</span> Comprar Novamente
                   </button>
                 </div>
               </div>
