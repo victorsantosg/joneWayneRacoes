@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=JetBrains+Mono:wght@500&amp;family=Work+Sans:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f1f1ec",
+                    "tertiary-container": "#593c33",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#145131",
+                    "surface-tint": "#2f6948",
+                    "on-background": "#1a1c19",
+                    "primary": "#00351c",
+                    "on-error-container": "#93000a",
+                    "background": "#fafaf5",
+                    "on-secondary-container": "#745c00",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-primary-container": "#81bd95",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbd0",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2f312e",
+                    "on-primary-fixed": "#002110",
+                    "surface-container": "#eeeee9",
+                    "surface-bright": "#fafaf5",
+                    "surface": "#fafaf5",
+                    "outline": "#707971",
+                    "surface-dim": "#dadad5",
+                    "secondary-fixed": "#ffe088",
+                    "surface-container-high": "#e8e8e3",
+                    "secondary": "#735c00",
+                    "outline-variant": "#c0c9c0",
+                    "on-surface-variant": "#404942",
+                    "on-surface": "#1a1c19",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-container-highest": "#e3e3de",
+                    "surface-container-low": "#f4f4ef",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-fixed": "#b2f1c6",
+                    "primary-container": "#0e4d2e",
+                    "primary-fixed-dim": "#97d4ab",
+                    "tertiary": "#40271f",
+                    "on-tertiary-fixed": "#2c160e",
+                    "on-tertiary-fixed-variant": "#5d4037",
+                    "secondary-container": "#fed65b",
+                    "tertiary-fixed-dim": "#e7bdb1",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e3e3de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Work Sans"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-window {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        body {
+            background-color: #fafaf5;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-primary shadow-md sticky top-0 z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-on-primary hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors p-2 rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-secondary-container">
+                    Jone Wayne Rações
+                </h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-on-primary/80 hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm" href="#">Home</a>
+<a class="text-on-primary/80 hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm" href="#">Produtos</a>
+<a class="text-secondary-container font-bold border-b-2 border-secondary-container font-label-sm text-label-sm" href="#">Carrinho</a>
+</nav>
+<button class="flex items-center gap-2 text-on-primary hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors px-4 py-2 rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="hidden md:inline font-label-sm text-label-sm">Carrinho</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Breadcrumbs & Title -->
+<div class="mb-8">
+<h2 class="font-display-lg text-display-lg text-primary mb-2">Seu Carrinho</h2>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>Início</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-bold">Carrinho</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Cart Items List -->
+<div class="lg:col-span-8">
+<div class="bg-surface-container-lowest border border-outline-variant p-6 md:p-8">
+<div class="hidden md:grid grid-cols-6 gap-4 border-b border-outline-variant pb-4 mb-6 font-label-sm text-label-sm text-on-surface-variant">
+<div class="col-span-3">PRODUTO</div>
+<div class="text-center">PREÇO</div>
+<div class="text-center">QTD</div>
+<div class="text-right">SUBTOTAL</div>
+</div>
+<!-- Cart Item 1 -->
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6 items-center border-b border-outline-variant/30 pb-6">
+<div class="col-span-3 flex items-center gap-6">
+<div class="relative w-24 h-24 md:w-32 md:h-32 bg-surface-container overflow-hidden rounded-lg border border-outline-variant">
+<img alt="Ração SM Raça Bruta" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFbYJSsn4AmJ26DKw7uyGsYBg46mrVldXsmwM11DEfq1cZ48Qf-gihFUhtU-tucgN7sX0ZF75L8KfJeLEsRivQdOi62fnVeVaTkW9n7iD_BDseTcvM97df9yxVuNjAyQNHusObmuwIo3nLmf9aI_ynbSXtLrrwmS--zoEj1EDGAntVYiKw0qsBRJ2aFkqjq4OOs673aaayfUWLZCEBDV0_DpYNdKg0T9rAiGaOO1aTyM87nwt1X34oz-imUelAkyGL6orFfHF4d_A"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+<div class="grain-window w-16 h-16 bg-primary"></div>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Equinos</span>
+<h3 class="font-headline-lg-mobile text-on-surface text-lg md:text-xl font-bold">Ração SM Raça Bruta 40kg</h3>
+<p class="text-on-surface-variant text-sm mt-1">Nutrição de Alta Performance</p>
+<button class="mt-2 text-error font-label-sm text-label-sm flex items-center gap-1 hover:underline w-fit">
+<span class="material-symbols-outlined text-[16px]">delete</span> Remover
+                                </button>
+</div>
+</div>
+<div class="flex md:block justify-between items-center text-center">
+<span class="md:hidden font-label-sm text-label-sm text-on-surface-variant">Preço:</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">R$ 189,90</span>
+</div>
+<div class="flex md:block justify-between items-center text-center">
+<span class="md:hidden font-label-sm text-label-sm text-on-surface-variant">Quantidade:</span>
+<div class="inline-flex items-center border border-outline-variant rounded-full overflow-hidden">
+<button class="p-2 hover:bg-surface-container-high transition-colors" onclick="this.parentNode.querySelector('input').stepDown()">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<input class="w-12 text-center bg-transparent border-none focus:ring-0 font-bold font-label-sm text-label-sm" min="1" readonly="" type="number" value="1"/>
+<button class="p-2 hover:bg-surface-container-high transition-colors" onclick="this.parentNode.querySelector('input').stepUp()">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<div class="flex md:block justify-between items-center text-right">
+<span class="md:hidden font-label-sm text-label-sm text-on-surface-variant">Subtotal:</span>
+<span class="font-headline-lg-mobile text-primary text-xl font-bold">R$ 189,90</span>
+</div>
+</div>
+<div class="mt-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+<a class="flex items-center gap-2 text-primary hover:underline font-label-sm text-label-sm font-bold" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+                            Continuar Comprando
+                        </a>
+<div class="flex items-center gap-2">
+<div class="px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                                Frete Grátis Ativado
+                             </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Summary -->
+<div class="lg:col-span-4">
+<div class="bg-surface-container-low border border-outline-variant p-6 md:p-8 sticky top-28">
+<h3 class="font-headline-lg-mobile text-on-surface font-bold mb-6">Resumo do Pedido</h3>
+<!-- Coupon -->
+<div class="mb-8">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">CUPOM DE DESCONTO</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface border border-outline-variant px-4 py-2 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all rounded-lg" placeholder="Insira seu código" type="text"/>
+<button class="px-6 py-2 bg-primary text-on-primary font-bold font-label-sm text-label-sm hover:bg-tertiary transition-colors rounded-lg">
+                                Aplicar
+                            </button>
+</div>
+</div>
+<div class="space-y-4 border-b border-outline-variant/30 pb-6 mb-6">
+<div class="flex justify-between font-body-md text-on-surface-variant">
+<span>Subtotal</span>
+<span class="font-bold">R$ 189,90</span>
+</div>
+<div class="flex justify-between font-body-md text-on-surface-variant">
+<span>Frete</span>
+<span class="text-primary font-bold">Grátis</span>
+</div>
+<div class="flex justify-between font-body-md text-on-surface-variant">
+<span>Desconto</span>
+<span class="text-error font-bold">- R$ 0,00</span>
+</div>
+</div>
+<div class="flex justify-between items-end mb-8">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">VALOR TOTAL</span>
+<span class="text-[10px] text-on-surface-variant">Em até 10x sem juros</span>
+</div>
+<span class="font-display-lg text-primary text-3xl font-extrabold tracking-tight">R$ 189,90</span>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary font-bold text-lg hover:bg-tertiary hover:shadow-xl transition-all active:scale-[0.98] duration-150 flex items-center justify-center gap-3 rounded-xl">
+                        Avançar para o Pagamento
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="mt-6 flex flex-col items-center gap-4">
+<p class="font-label-sm text-[10px] text-on-surface-variant text-center uppercase tracking-widest">Pagamento 100% Seguro</p>
+<div class="flex gap-3 opacity-60 grayscale hover:grayscale-0 transition-all cursor-default">
+<span class="material-symbols-outlined text-[32px]">credit_card</span>
+<span class="material-symbols-outlined text-[32px]">account_balance</span>
+<span class="material-symbols-outlined text-[32px]">payments</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-lowest border-t-2 border-primary/10">
+<div class="flex flex-col items-center md:items-start gap-4">
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Jone Wayne Rações</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant/70">© 2024 Jone Wayne Rações - Nutrição de Bruta Performance.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant/70 hover:text-primary underline transition-all active:opacity-70" href="#">Privacidade</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant/70 hover:text-primary underline transition-all active:opacity-70" href="#">Termos de Uso</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant/70 hover:text-primary underline transition-all active:opacity-70" href="#">Rastreio</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant/70 hover:text-primary underline transition-all active:opacity-70" href="#">Fale Conosco</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface border-t border-outline-variant shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-label-sm text-label-sm">Categorias</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-sm text-label-sm">Pedidos</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">Perfil</span>
+</a>
+</nav>
+<div class="h-20 md:hidden"></div> <!-- Spacer for mobile bottom nav -->
+<script>
+        // Simple micro-interaction for item removal simulation
+        document.querySelector('.text-error').addEventListener('click', function(e) {
+            if(confirm('Deseja realmente remover este item do carrinho?')) {
+                const item = e.target.closest('.grid.grid-cols-1.md\\:grid-cols-6');
+                item.style.opacity = '0';
+                setTimeout(() => {
+                    item.innerHTML = '<div class="col-span-full py-12 text-center text-on-surface-variant font-label-sm text-label-sm">Seu carrinho está vazio.</div>';
+                    item.style.opacity = '1';
+                }, 300);
+            }
+        });
+    </script>
+</body></html>
