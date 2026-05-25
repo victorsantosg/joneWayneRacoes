@@ -8,18 +8,23 @@ export default async function Page() {
 
   return (
     <>
-      <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8">
+      <main className="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-10">
         {/*  Hero Banner: Festival do Cavalo  */}
-        <section className="relative min-h-[400px] mb-12 rounded-xl overflow-hidden shadow-xl group bg-primary flex items-center">
-          <div className="absolute inset-0 bg-[length:auto_100%] bg-right bg-no-repeat transition-transform duration-700 group-hover:scale-105 opacity-90" style={{ backgroundImage: "url('/4.jpg')" }}></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/50 to-transparent"></div>
-          <div className="absolute inset-0 p-8 md:p-16 flex flex-col justify-center max-w-2xl">
-            <span className="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-sm text-label-sm mb-4 w-fit">DESTAQUE RURAL</span>
-            <h2 className="font-display-lg text-display-lg text-white mb-4 leading-tight">Festival do Cavalo Raça Bruta</h2>
-            <p className="text-on-primary-container text-body-md mb-8 max-w-md">Descubra a linha premium de nutrição para equinos atletas. Performance superior, cascos inquebráveis e pelagem de campeão.</p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#produtos" className="bg-primary-fixed text-on-primary-fixed px-8 py-3 rounded font-bold hover:bg-primary-fixed-dim transition-all active:scale-95 text-center flex-1 md:flex-none">Ver Ofertas</a>
-              <Link href="/categorias" className="border-2 border-white text-white px-8 py-3 rounded font-bold hover:bg-white/10 transition-all active:scale-95 text-center flex-1 md:flex-none">Saiba Mais</Link>
+        <section className="relative h-[450px] md:h-[500px] mb-12 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl group flex items-center">
+          <div className="absolute inset-0 bg-black">
+             <div className="absolute inset-0 bg-center md:bg-right bg-cover md:bg-contain bg-no-repeat transition-transform duration-1000 group-hover:scale-105 opacity-60 md:opacity-80" style={{ backgroundImage: "url('/4.jpg')" }}></div>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
+          
+          <div className="absolute inset-0 p-6 md:p-16 flex flex-col justify-end md:justify-center max-w-3xl pb-10">
+            <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150 fill-mode-both">
+              <span className="hidden md:inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase mb-4 shadow-lg border border-primary/50">Lançamento</span>
+              <h2 className="hidden md:block text-4xl md:text-6xl text-white mb-4 font-black leading-tight drop-shadow-md">Festival do Cavalo<br/>Raça Bruta</h2>
+              <p className="hidden md:block text-white/90 text-sm md:text-lg mb-8 max-w-lg leading-relaxed drop-shadow-sm font-medium">A linha premium de nutrição para equinos atletas. Performance superior, energia explosiva e pelagem de campeão.</p>
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4 md:mt-0">
+                <a href="#produtos" className="bg-white text-primary px-8 py-4 rounded-xl font-black text-center transition-all hover:bg-gray-100 hover:scale-105 shadow-xl w-full sm:w-auto">Comprar Agora</a>
+                <Link href="/categorias" className="bg-black/30 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-center transition-all hover:bg-white/20 w-full sm:w-auto">Conhecer Linha</Link>
+              </div>
             </div>
           </div>
         </section>
@@ -57,30 +62,29 @@ export default async function Page() {
         </section>
 
         {/*  Category Selector  */}
-        <section className="mb-12">
-          <h3 className="font-headline-lg text-headline-lg text-primary mb-6 flex items-center gap-2">
-            <span className="material-symbols-outlined">grid_view</span>
-            Navegação por Espécie
-          </h3>
-          <div className="flex gap-4 overflow-x-auto pb-4 custom-scroll snap-x">
-            <button className="snap-start flex-none flex items-center gap-3 bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full transition-all active:translate-x-1 shadow-md">
-              <span className="material-symbols-outlined">pets</span>
+        <section className="mb-16">
+          <div className="flex justify-between items-center mb-6">
+             <h3 className="text-2xl font-black text-on-surface">Explorar Linhas</h3>
+          </div>
+          <div className="flex gap-4 overflow-x-auto pb-6 -mx-4 px-4 md:mx-0 md:px-0 custom-scroll snap-x">
+            <button className="snap-start flex-none flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-2xl transition-all shadow-lg shadow-primary/30">
+              <span className="material-symbols-outlined text-2xl">pets</span>
               <span className="font-bold">Equinos</span>
             </button>
-            <button className="snap-start flex-none flex items-center gap-3 bg-surface-container-high text-on-surface-variant px-8 py-4 rounded-full hover:bg-surface-container-highest transition-all">
-              <span className="material-symbols-outlined">bakery_dining</span>
+            <button className="snap-start flex-none flex items-center gap-3 bg-surface-container-low text-on-surface border border-outline-variant/30 px-8 py-4 rounded-2xl hover:bg-surface-container hover:shadow-md transition-all">
+              <span className="material-symbols-outlined text-2xl text-primary">bakery_dining</span>
               <span className="font-bold">Aves</span>
             </button>
-            <button className="snap-start flex-none flex items-center gap-3 bg-surface-container-high text-on-surface-variant px-8 py-4 rounded-full hover:bg-surface-container-highest transition-all">
-              <span className="material-symbols-outlined">egg</span>
+            <button className="snap-start flex-none flex items-center gap-3 bg-surface-container-low text-on-surface border border-outline-variant/30 px-8 py-4 rounded-2xl hover:bg-surface-container hover:shadow-md transition-all">
+              <span className="material-symbols-outlined text-2xl text-primary">egg</span>
               <span className="font-bold">Suínos</span>
             </button>
-            <button className="snap-start flex-none flex items-center gap-3 bg-surface-container-high text-on-surface-variant px-8 py-4 rounded-full hover:bg-surface-container-highest transition-all">
-              <span className="material-symbols-outlined">agriculture</span>
+            <button className="snap-start flex-none flex items-center gap-3 bg-surface-container-low text-on-surface border border-outline-variant/30 px-8 py-4 rounded-2xl hover:bg-surface-container hover:shadow-md transition-all">
+              <span className="material-symbols-outlined text-2xl text-primary">agriculture</span>
               <span className="font-bold">Bovinos</span>
             </button>
-            <button className="snap-start flex-none flex items-center gap-3 bg-surface-container-high text-on-surface-variant px-8 py-4 rounded-full hover:bg-surface-container-highest transition-all">
-              <span className="material-symbols-outlined">science</span>
+            <button className="snap-start flex-none flex items-center gap-3 bg-surface-container-low text-on-surface border border-outline-variant/30 px-8 py-4 rounded-2xl hover:bg-surface-container hover:shadow-md transition-all">
+              <span className="material-symbols-outlined text-2xl text-primary">science</span>
               <span className="font-bold">Suplementos</span>
             </button>
           </div>
@@ -89,52 +93,57 @@ export default async function Page() {
         {/*  Product Grid  */}
         <section id="produtos" className="mb-16">
           <div className="flex justify-between items-end mb-8">
-            <h3 className="font-headline-lg text-headline-lg text-primary">Nutrição de Alta Performance</h3>
-            <a className="text-secondary font-bold hover:underline font-label-sm text-label-sm uppercase tracking-widest" href="#">Ver Todos</a>
+            <h3 className="text-3xl font-black text-on-surface">Nutrição de Alta Performance</h3>
+            <a className="text-primary font-bold hover:underline text-sm tracking-wide hidden sm:block" href="#">VER TUDO</a>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {produtos?.map((produto) => {
               const desconto = produto.preco_antigo ? Math.round(((produto.preco_antigo - produto.preco) / produto.preco_antigo) * 100) : 0;
               return (
-                <div key={produto.id} className="group bg-white border border-outline-variant p-6 flex flex-col relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 rounded-xl">
-                  <Link href={`/produtos/${produto.id}`} className="block relative mb-6 aspect-square overflow-hidden bg-surface-container-low flex items-center justify-center rounded-lg">
-                    <img alt={produto.nome} className="h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500" src={produto.imagem_url} />
+                <div key={produto.id} className="group bg-surface-container-lowest border border-outline-variant/40 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-primary/20 rounded-2xl overflow-hidden">
+                  <Link href={`/produtos/${produto.id}`} className="block relative aspect-[4/3] overflow-hidden bg-gray-50 flex items-center justify-center">
+                    <img alt={produto.nome} className="h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" src={produto.imagem_url} />
                     {produto.destaque_tag && (
-                      <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-xs font-bold rounded-full shadow">
+                      <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-xs font-black rounded-lg shadow uppercase tracking-wider">
                         {produto.destaque_tag}
                       </div>
                     )}
                     {desconto > 0 && (
-                      <div className="absolute top-4 right-4 bg-error text-on-error px-2.5 py-1 text-xs font-bold rounded-lg shadow-sm">
+                      <div className="absolute top-4 right-4 bg-error text-white px-3 py-1 text-xs font-black rounded-lg shadow-sm">
                         -{desconto}%
                       </div>
                     )}
                   </Link>
-                  <div className="flex-1">
+                  <div className="p-6 flex flex-col flex-1">
                     <div className="flex flex-wrap gap-2 mb-3">
                       {produto.tags?.map((tag: string, index: number) => (
-                        <span key={index} className="bg-secondary-container text-on-secondary-container text-xs px-2.5 py-1 rounded font-bold">{tag}</span>
+                         <span key={index} className="text-primary text-[10px] uppercase font-bold tracking-wider">{tag}</span>
                       ))}
                     </div>
-                    <Link href={`/produtos/${produto.id}`} className="hover:underline">
-                      <h4 className="font-headline-lg text-headline-lg text-primary mb-2 hover:text-secondary transition-colors">{produto.nome}</h4>
-                    </Link>
-                    <p className="text-on-surface-variant text-body-md mb-6 line-clamp-2">{produto.descricao}</p>
-                  </div>
-                  <div className="mt-auto pt-6 border-t border-outline-variant/50 flex items-center justify-between">
-                    <div className="flex flex-col">
-                      {produto.preco_antigo && <span className="text-label-sm text-on-surface-variant line-through">R$ {Number(produto.preco_antigo).toFixed(2).replace('.', ',')}</span>}
-                      <span className="text-headline-lg text-primary font-extrabold text-2xl">R$ {Number(produto.preco).toFixed(2).replace('.', ',')}</span>
-                    </div>
                     <Link href={`/produtos/${produto.id}`}>
-                      <button className="bg-primary text-on-primary p-4 rounded-xl hover:bg-secondary hover:text-on-secondary transition-all active:scale-95 shadow-md flex items-center justify-center">
-                        <span className="material-symbols-outlined">add_shopping_cart</span>
-                      </button>
+                      <h4 className="font-bold text-lg text-on-surface mb-2 hover:text-primary transition-colors line-clamp-2">{produto.nome}</h4>
                     </Link>
+                    <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">{produto.descricao}</p>
+                    
+                    <div className="mt-auto pt-4 flex flex-col gap-4">
+                      <div className="flex flex-col">
+                        {produto.preco_antigo && <span className="text-xs text-on-surface-variant line-through mb-1">R$ {Number(produto.preco_antigo).toFixed(2).replace('.', ',')}</span>}
+                        <span className="text-3xl font-black text-primary">R$ {Number(produto.preco).toFixed(2).replace('.', ',')}</span>
+                        <span className="text-xs text-on-surface-variant mt-1">no Pix ou Boleto</span>
+                      </div>
+                      <Link href={`/produtos/${produto.id}`} className="w-full">
+                        <button className="w-full bg-primary/10 text-primary font-bold py-3.5 rounded-xl hover:bg-primary hover:text-white transition-all active:scale-95 flex items-center justify-center gap-2 border border-primary/20">
+                          <span className="material-symbols-outlined text-[20px]">local_mall</span> Comprar
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );
             })}
+          </div>
+          <div className="mt-8 text-center sm:hidden">
+             <a className="text-primary font-bold hover:underline text-sm tracking-wide inline-block py-2" href="#">VER TODOS OS PRODUTOS</a>
           </div>
         </section>
 
