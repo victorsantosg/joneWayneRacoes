@@ -12,8 +12,8 @@ export default async function Page() {
       <Header />
 <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 mb-20 md:mb-0">
 {/*  Hero Banner: Festival do Cavalo  */}
-<section className="relative h-[400px] md:h-[500px] mb-12 rounded-xl overflow-hidden shadow-xl group">
-<div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPrpqiS0oOyC8dmepzw9YIswsuSqxpB9_FwrcMhnKOW65j3hnRUSU7UWJO9K40uqLmY9ODbRw3jwOesaVkpyc-viTvDSQtXqS7QaeVD7_euFSKexoM_N1dXih91soD9auT8quPSAtm5EDPg4-R6Le8E1JSKc_cuFCZQfRDNqXedtPkkgeafqu85w9Od7Y4BnAPYbl9_w4o3ZtLRQ21uZ-4N0u7zIEAQ5dMFA4FaXAeP2HHH6Bn3BDbQSJ_c_R-SgNBgL61uM_kJYc')" }}></div>
+<section className="relative h-[350px] md:h-[400px] mb-12 rounded-xl overflow-hidden shadow-xl group bg-primary">
+<div className="absolute inset-0 bg-[length:auto_100%] bg-right bg-no-repeat transition-transform duration-700 group-hover:scale-105 opacity-90" style={{ backgroundImage: "url('/4.jpg')" }}></div>
 <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
 <div className="absolute inset-0 p-8 md:p-16 flex flex-col justify-center max-w-2xl">
 <span className="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-sm text-label-sm mb-4 w-fit">DESTAQUE RURAL</span>
