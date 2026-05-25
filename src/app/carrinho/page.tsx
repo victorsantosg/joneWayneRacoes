@@ -1,6 +1,6 @@
 'use client';
 import { useCartStore } from '../../store/useCartStore';
-import Header from '../../components/Header';
+
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -12,7 +12,7 @@ export default function Page() {
 
   return (
     <>
-      <Header />
+
       <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
         <div className="mb-8">
           <h2 className="font-display-lg text-display-lg text-primary mb-2">Seu Carrinho</h2>
