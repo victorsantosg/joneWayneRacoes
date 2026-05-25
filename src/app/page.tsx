@@ -20,8 +20,8 @@ export default async function Page() {
 <h2 className="font-display-lg text-display-lg text-white mb-4 leading-tight">Festival do Cavalo Raça Bruta</h2>
 <p className="text-on-primary-container text-body-md mb-8 max-w-md">Descubra a linha premium de nutrição para equinos atletas. Performance superior, cascos inquebráveis e pelagem de campeão.</p>
 <div className="flex gap-4">
-<button className="bg-primary-fixed text-on-primary-fixed px-8 py-3 rounded font-bold hover:bg-primary-fixed-dim transition-all active:scale-95">Ver Ofertas</button>
-<button className="border-2 border-white text-white px-8 py-3 rounded font-bold hover:bg-white/10 transition-all active:scale-95">Saiba Mais</button>
+<a href="#produtos" className="bg-primary-fixed text-on-primary-fixed px-8 py-3 rounded font-bold hover:bg-primary-fixed-dim transition-all active:scale-95 text-center">Ver Ofertas</a>
+<Link href="/categorias" className="border-2 border-white text-white px-8 py-3 rounded font-bold hover:bg-white/10 transition-all active:scale-95 text-center">Saiba Mais</Link>
 </div>
 </div>
 </section>
@@ -55,7 +55,7 @@ export default async function Page() {
 </div>
 </section>
 {/*  Product Grid  */}
-<section className="mb-16">
+<section id="produtos" className="mb-16">
 <div className="flex justify-between items-end mb-8">
 <h3 className="font-headline-lg text-headline-lg text-primary">Nutrição de Alta Performance</h3>
 <a className="text-secondary font-bold hover:underline font-label-sm text-label-sm uppercase tracking-widest" href="#">Ver Todos</a>
@@ -125,14 +125,14 @@ export default async function Page() {
 <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
 <span className="font-label-sm text-label-sm">Início</span>
 </a>
-<a className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<Link className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="/categorias">
 <span className="material-symbols-outlined">grid_view</span>
 <span className="font-label-sm text-label-sm">Categorias</span>
-</a>
-<a className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+</Link>
+<Link className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="/pedidos">
 <span className="material-symbols-outlined">receipt_long</span>
 <span className="font-label-sm text-label-sm">Pedidos</span>
-</a>
+</Link>
 <a className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
 <span className="material-symbols-outlined">person</span>
 <span className="font-label-sm text-label-sm">Perfil</span>
