@@ -19,7 +19,7 @@ export default function Header() {
     <header className="bg-white/90 dark:bg-black/90 backdrop-blur-xl shadow-sm sticky top-0 z-[999] border-b border-outline-variant/20 transition-all">
       <div className="flex justify-between items-center px-4 md:px-8 py-3 md:py-4 w-full max-w-7xl mx-auto">
         <div className="flex items-center gap-3">
-          <button onClick={() => setDrawerOpen(true)} className="md:hidden text-on-surface hover:bg-surface-container p-2 rounded-full transition-colors active:scale-95 duration-150 flex items-center justify-center">
+          <button onClick={() => setDrawerOpen(true)} className="md:hidden text-gray-900 dark:text-white hover:bg-surface-container p-2 rounded-full transition-colors active:scale-95 duration-150 flex items-center justify-center">
             <span className="material-symbols-outlined text-2xl">menu</span>
           </button>
           <Link href="/" className="flex items-center gap-2">
