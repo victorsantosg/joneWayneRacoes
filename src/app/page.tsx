@@ -21,42 +21,42 @@ export default async function Page() {
               <span className="hidden md:inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase mb-4 shadow-lg border border-primary/50">Lançamento</span>
               <h2 className="hidden md:block text-4xl md:text-6xl text-white mb-4 font-black leading-tight drop-shadow-md">Festival do Cavalo<br/>Raça Bruta</h2>
               <p className="hidden md:block text-white/90 text-sm md:text-lg mb-8 max-w-lg leading-relaxed drop-shadow-sm font-medium">A linha premium de nutrição para equinos atletas. Performance superior, energia explosiva e pelagem de campeão.</p>
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4 md:mt-0">
-                <a href="#produtos" className="bg-white text-primary px-8 py-4 rounded-xl font-black text-center transition-all hover:bg-gray-100 hover:scale-105 shadow-xl w-full sm:w-auto">Comprar Agora</a>
-                <Link href="/categorias" className="bg-black/30 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-center transition-all hover:bg-white/20 w-full sm:w-auto">Conhecer Linha</Link>
+              <div className="flex flex-row gap-3 w-full sm:w-auto mt-4 md:mt-0">
+                <a href="#produtos" className="flex-1 sm:flex-none bg-white text-primary px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-black text-sm sm:text-base text-center transition-all hover:bg-gray-100 hover:scale-105 shadow-xl flex items-center justify-center">Comprar Agora</a>
+                <Link href="/categorias" className="flex-1 sm:flex-none bg-black/30 backdrop-blur-md border border-white/30 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-center transition-all hover:bg-white/20 flex items-center justify-center">Conhecer Linha</Link>
               </div>
             </div>
           </div>
         </section>
 
         {/*  Trust Badges: Vantagens Rural  */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <div className="flex items-center gap-4 bg-surface-container-low p-5 rounded-xl border border-outline-variant/30">
-            <span className="material-symbols-outlined text-4xl text-primary">local_shipping</span>
+        <section className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-16">
+          <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4 bg-surface-container-low p-3 md:p-5 rounded-xl border border-outline-variant/30">
+            <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">local_shipping</span>
             <div>
-              <h4 className="font-bold text-primary font-headline-lg text-base">Logística Própria</h4>
-              <p className="text-on-surface-variant text-sm">Entrega rápida na sua fazenda.</p>
+              <h4 className="font-bold text-primary font-headline-lg text-xs md:text-base mb-0.5 md:mb-0">Logística Própria</h4>
+              <p className="text-on-surface-variant text-[10px] md:text-sm leading-tight">Entrega rápida na sua fazenda.</p>
             </div>
           </div>
-          <div className="flex items-center gap-4 bg-surface-container-low p-5 rounded-xl border border-outline-variant/30">
-            <span className="material-symbols-outlined text-4xl text-primary">credit_card</span>
+          <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4 bg-surface-container-low p-3 md:p-5 rounded-xl border border-outline-variant/30">
+            <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">credit_card</span>
             <div>
-              <h4 className="font-bold text-primary font-headline-lg text-base">Facilidade no Pagamento</h4>
-              <p className="text-on-surface-variant text-sm">Pix ou Cartão em até 12x.</p>
+              <h4 className="font-bold text-primary font-headline-lg text-xs md:text-base mb-0.5 md:mb-0">Facilidade no Pagamento</h4>
+              <p className="text-on-surface-variant text-[10px] md:text-sm leading-tight">Pix ou Cartão em até 12x.</p>
             </div>
           </div>
-          <div className="flex items-center gap-4 bg-surface-container-low p-5 rounded-xl border border-outline-variant/30">
-            <span className="material-symbols-outlined text-4xl text-primary">support_agent</span>
+          <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4 bg-surface-container-low p-3 md:p-5 rounded-xl border border-outline-variant/30">
+            <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">support_agent</span>
             <div>
-              <h4 className="font-bold text-primary font-headline-lg text-base">Zootecnista de Plantão</h4>
-              <p className="text-on-surface-variant text-sm">Suporte gratuito na formulação.</p>
+              <h4 className="font-bold text-primary font-headline-lg text-xs md:text-base mb-0.5 md:mb-0">Zootecnista de Plantão</h4>
+              <p className="text-on-surface-variant text-[10px] md:text-sm leading-tight">Suporte gratuito na formulação.</p>
             </div>
           </div>
-          <div className="flex items-center gap-4 bg-surface-container-low p-5 rounded-xl border border-outline-variant/30">
-            <span className="material-symbols-outlined text-4xl text-primary">workspace_premium</span>
+          <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4 bg-surface-container-low p-3 md:p-5 rounded-xl border border-outline-variant/30">
+            <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">workspace_premium</span>
             <div>
-              <h4 className="font-bold text-primary font-headline-lg text-base">Qualidade Garantida</h4>
-              <p className="text-on-surface-variant text-sm">Produtos registrados no MAPA.</p>
+              <h4 className="font-bold text-primary font-headline-lg text-xs md:text-base mb-0.5 md:mb-0">Qualidade Garantida</h4>
+              <p className="text-on-surface-variant text-[10px] md:text-sm leading-tight">Produtos registrados no MAPA.</p>
             </div>
           </div>
         </section>
