@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const client = new Client({
-  connectionString: 'postgresql://postgres.uhmctjacemlpkayjoiuz:***REMOVED***@aws-1-sa-east-1.pooler.supabase.com:5432/postgres'
+  connectionString: process.env.DATABASE_URL // ex.: postgresql://postgres.<ref>:<senha>@aws-1-sa-east-1.pooler.supabase.com:5432/postgres
 });
 
 async function run() {
